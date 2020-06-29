@@ -13,15 +13,19 @@ class PokemonPage extends React.Component {
     filteredPokemon: []
   }
 
-  componentDidMount() {
-    fetch(API)
-    .then(resp => resp.json())
-    .then(data => {
-      this.setState({
-        pokemon: data,
-        filteredPokemon: data
-      })
+  handleFetch = () => {
+  fetch(API)
+  .then(resp => resp.json())
+  .then(data => {
+    this.setState({
+      pokemon: data,
+      filteredPokemon: data
     })
+  })
+}
+
+  componentDidMount() {
+    this.handleFetch()
   }
 
   handleSearch = (letters) => {
@@ -48,6 +52,8 @@ class PokemonPage extends React.Component {
       },
       body: JSON.stringify(obj)
     })
+    .then(resp => resp.json())
+    .then(data => this.handleFetch())
   }
 
   render() {

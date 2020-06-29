@@ -1367,6 +1367,24 @@
         "back": ""
       },
       "id": 153
+    },
+    {
+      "name": "fsdgsdf",
+      "hp": "44",
+      "sprites": {
+        "front": "",
+        "back": ""
+      },
+      "id": 154
+    },
+    {
+      "name": "fewfqwf",
+      "hp": "55",
+      "sprites": {
+        "front": "",
+        "back": ""
+      },
+      "id": 155
     }
   ]
 }
