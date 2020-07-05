@@ -30,7 +30,7 @@ class PokemonForm extends React.Component {
       }
     }
     this.props.addPokemon(pokeObj)
-    
+    e.target.reset()
   }
   render() {
     return (
